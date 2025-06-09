@@ -82,10 +82,16 @@ def verificar_incidente_nuevo(nuevo, anteriores):
 
             lat2 = float(lat2)
             lon2 = float(lon2)
-            dist = haversine(lat1, lon1, lat2, lon2)
-            if dist > 6:
-                continue
-            print(f"📍 Distancia entre coordenadas: {dist:.2f} metros")
+
+            #?==>
+            # dist = haversine(lat1, lon1, lat2, lon2)
+            # if dist > 6:
+            #     continue
+            # print(f"📍 Distancia entre coordenadas: {dist:.2f} metros")
+             #? <==
+             # (Opcional) solo para debug
+            print(f"📍 Coordenadas nuevo: ({lat1}, {lon1}) vs anterior: ({lat2}, {lon2})")
+
             # if dist <= 5:
             #     print(f"❌ Muy cerca: {dist:.2f} metros. Posible duplicado.")
             #     return True, inc, 0.0
